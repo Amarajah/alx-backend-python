@@ -12,7 +12,4 @@ async def async_comprehension() -> List[float]:
     then write a coroutine called async_comprehension that takes no arguments.
     The coroutine will collect 10 random numbers using an async
     comprehensing over async_generator, then return the 10 random numbers."""
-    num = random.uniform(0, 10)
-    for i in range(10):
-        await async_generator
-    return num
+    return [i async for i in async_generator()]
